@@ -36,6 +36,9 @@ footer p {
 #socials {
   margin-left: auto;
 }
+.menu {
+  flex: 1;
+}
 .menu a {
   text-decoration: none;
   color: white;
@@ -43,24 +46,44 @@ footer p {
 }
 .menu li {
   display: inline-block;
-  padding: 30px 10px;
+  padding: 0 10px;
 }
 .menu ul {
   margin: 0;
+  padding: 0;
 }
 
 #search-cart ul {
   margin: 0;
   padding-left: 0;
+  list-style-type: none;
+  display: inline-block;
 }
-#search-cart li {
+#search-cart li a {
   color: white;
   text-decoration: none;
   list-style-type: none;
-  display: inline-block;
   font-size: 20px;
   padding: 0 5px;
 }
+#search-cart li {
+  display: inline-block;
+}
+#search-cart {
+  flex: 1;
+  text-align: right;
+}
 #top-header {
   display: flex;
+  align-items: center;
+  padding-top: 30px;
+}
+.active {
+  font-weight: bold;
+}
+
+.center-content {
+  max-width: 1110px;
+  margin-left: auto;
+  margin-right: auto;
 }
