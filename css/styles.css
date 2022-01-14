@@ -138,4 +138,34 @@ h2 {
 
 #welcome-image {
   margin-top: 100px;
+  display: flex;
+}
+#welcome-right {
+  display: inline-block;
+  padding-left: 60px;
+  padding-top: 170px;
+}
+.welcome-text {
+  color: white;
+  font-family: "Roboto Slab", serif;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.welcome-button {
+  background-color: transparent;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  border: 3px solid white;
+  text-transform: uppercase;
+  color: white;
+  font-size: 22px;
+  padding: 10px 55px;
+  border-radius: 10px;
+}
+
+.welcome-button:hover {
+  background-color: white;
+  color: #024059;
 }
