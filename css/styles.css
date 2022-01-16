@@ -1,6 +1,6 @@
 #header-home {
   background-image: url(../images/pattern.jpg);
-  height: 100vh;
+  min-height: 100vh;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -136,14 +136,24 @@ h2 {
   text-decoration: none;
 }
 
-#welcome-image {
-  margin-top: 100px;
+.welcome-container {
   display: flex;
+  align-items: center;
+  padding-bottom: 40px;
+  min-height: calc(100vh - 121px);
+}
+#welcome-image {
+  flex: 2;
+}
+
+#welcome-image img {
+  width: 100%;
 }
 #welcome-right {
-  display: inline-block;
-  padding-left: 60px;
-  padding-top: 170px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .welcome-text {
   color: white;
@@ -168,4 +178,74 @@ h2 {
 .welcome-button:hover {
   background-color: white;
   color: #024059;
+}
+
+/* RESPONSIVE RULES */
+@media only screen and (max-width: 1030px) {
+  #welcome-image {
+    flex: 1;
+  }
+}
+@media only screen and (max-width: 920px) {
+  #top-header {
+    flex-direction: column;
+  }
+  .menu {
+    order: 2;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  #logo {
+    order: 1;
+  }
+  #search-cart {
+    order: 3;
+  }
+  .welcome-container {
+    flex-direction: column;
+    min-height: calc(100vh - 204px);
+    padding-top: 40px;
+  }
+  #welcome-image {
+    flex: none;
+    padding: 0 20px;
+  }
+  #welcome-right {
+    flex: none;
+  }
+  #categories-home h2 {
+    text-align: center;
+  }
+  .row {
+    display: block;
+  }
+  .vertical-image,
+  .horizontal-image {
+    height: 450px;
+    margin: 0 20px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .menu li {
+    padding: 0 6px;
+  }
+  .welcome-text {
+    font-size: 24px;
+  }
+  .vertical-image,
+  .horizontal-image {
+    height: 300px;
+    margin: 0 20px;
+  }
+  #socials {
+    text-align: center;
+  }
+
+  #copyrights {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  footer {
+    display: block;
+  }
 }
