@@ -1,4 +1,4 @@
-#header-home {
+header {
   background-image: url(../images/pattern.jpg);
   min-height: 100vh;
 }
@@ -13,27 +13,27 @@ footer {
   align-items: center;
   padding: 10px 20px;
 }
-#copyrights {
+.copyrights {
   color: white;
 }
 footer p {
   margin: 0;
 }
-#socials li {
+.socials li {
   list-style-type: none;
   display: inline-block;
   font-size: 20px;
   padding: 0 5px;
 }
-#socials ul {
+.socials ul {
   margin: 0;
   padding-left: 0;
 }
-#socials li a {
+.socials li a {
   text-decoration: none;
   color: white;
 }
-#socials {
+.socials {
   margin-left: auto;
 }
 .menu {
@@ -53,27 +53,27 @@ footer p {
   padding: 0;
 }
 
-#search-cart ul {
+.search-cart ul {
   margin: 0;
   padding-left: 0;
   list-style-type: none;
   display: inline-block;
 }
-#search-cart li a {
+.search-cart li a {
   color: white;
   text-decoration: none;
   list-style-type: none;
   font-size: 20px;
   padding: 0 5px;
 }
-#search-cart li {
+.search-cart li {
   display: inline-block;
 }
-#search-cart {
+.search-cart {
   flex: 1;
   text-align: right;
 }
-#top-header {
+.top-header {
   display: flex;
   align-items: center;
   padding-top: 30px;
@@ -94,8 +94,7 @@ footer p {
 }
 .row {
   display: flex;
-  margin-left: -10px;
-  margin-right: -10px;
+  gap: 10px;
 }
 .vertical-image {
   flex: 1;
@@ -142,14 +141,14 @@ h2 {
   padding-bottom: 40px;
   min-height: calc(100vh - 121px);
 }
-#welcome-image {
+.welcome-image {
   flex: 2;
 }
 
-#welcome-image img {
+.welcome-image img {
   width: 100%;
 }
-#welcome-right {
+.welcome-right {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -161,6 +160,10 @@ h2 {
   font-size: 32px;
   font-weight: bold;
   text-align: center;
+}
+
+.welcome-text span {
+  display: block;
 }
 
 .welcome-button {
@@ -182,12 +185,12 @@ h2 {
 
 /* RESPONSIVE RULES */
 @media only screen and (max-width: 1030px) {
-  #welcome-image {
+  .welcome-image {
     flex: 1;
   }
 }
 @media only screen and (max-width: 920px) {
-  #top-header {
+  .top-header {
     flex-direction: column;
   }
   .menu {
@@ -195,10 +198,10 @@ h2 {
     margin-top: 20px;
     margin-bottom: 20px;
   }
-  #logo {
+  .logo {
     order: 1;
   }
-  #search-cart {
+  .search-cart {
     order: 3;
   }
   .welcome-container {
@@ -206,14 +209,14 @@ h2 {
     min-height: calc(100vh - 204px);
     padding-top: 40px;
   }
-  #welcome-image {
+  .welcome-image {
     flex: none;
     padding: 0 20px;
   }
-  #welcome-right {
+  .welcome-right {
     flex: none;
   }
-  #categories-home h2 {
+  .categories-home h2 {
     text-align: center;
   }
   .row {
@@ -237,11 +240,11 @@ h2 {
     height: 300px;
     margin: 0 20px;
   }
-  #socials {
+  .socials {
     text-align: center;
   }
 
-  #copyrights {
+  .copyrights {
     text-align: center;
     margin-bottom: 10px;
   }
