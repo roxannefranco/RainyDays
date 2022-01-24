@@ -1,3 +1,10 @@
+:root {
+  --main-blue: #024059;
+  --main-font: "Roboto", sans-serif;
+  --second-font: "Roboto Slab", serif;
+  --grey: #f1f1f1;
+}
+
 header {
   background-image: url(../images/pattern.jpg);
 }
@@ -6,11 +13,11 @@ header {
   min-height: 100vh;
 }
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--main-font);
   margin: 0;
 }
 footer {
-  background-color: #024059;
+  background-color: var(--main-blue);
   padding: 15px;
   display: flex;
   align-items: center;
@@ -120,8 +127,8 @@ footer p {
   object-fit: cover;
 }
 .page-title {
-  font-family: "Roboto Slab", serif;
-  color: #024059;
+  font-family: var(--second-font);
+  color: var(--main-blue);
   font-size: 32px;
   margin: 0;
 }
@@ -143,7 +150,7 @@ footer p {
   justify-content: center;
   align-items: center;
   display: flex;
-  font-family: "Roboto Slab", serif;
+  font-family: var(--second-font);
   font-size: 32px;
   font-weight: bold;
   color: white;
@@ -171,7 +178,7 @@ footer p {
 }
 .welcome-text {
   color: white;
-  font-family: "Roboto Slab", serif;
+  font-family: var(--second-font);
   font-size: 32px;
   font-weight: bold;
   text-align: center;
@@ -183,7 +190,7 @@ footer p {
 
 .welcome-button {
   background-color: transparent;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--main-font);
   font-weight: bold;
   border: 3px solid white;
   text-transform: uppercase;
@@ -196,7 +203,7 @@ footer p {
 
 .welcome-button:hover {
   background-color: white;
-  color: #024059;
+  color: var(--main-blue);
 }
 
 .shop-items {
@@ -206,7 +213,7 @@ footer p {
 }
 
 .shop-item {
-  background-color: #f1f1f1;
+  background-color: var(--grey);
   text-align: center;
   padding: 40px;
   box-sizing: border-box;
@@ -226,7 +233,7 @@ footer p {
 
 .item-title,
 .item-price {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--main-font);
   margin: 0%;
   padding-top: 5px;
 }
@@ -238,6 +245,118 @@ footer p {
 .item-price {
   font-size: 16px;
   color: black;
+}
+
+.box-product {
+  width: 620px;
+  height: 640px;
+  text-align: center;
+}
+
+.bg-grey {
+  background-color: var(--grey);
+}
+
+.size-options {
+  text-align: center;
+  font-size: 20px;
+  text-decoration: none;
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+}
+
+.size-options li {
+  width: 53px;
+  height: 53px;
+  display: flex;
+  border: 3px solid transparent;
+  transition: border 200ms ease;
+  justify-content: center;
+  align-items: center;
+}
+
+.size-options li:hover {
+  border-color: var(--main-blue);
+}
+
+.second-title {
+  color: black;
+  font-size: 26px;
+}
+
+.product-title {
+  font-size: 30px;
+  color: #6e6e6e;
+  margin: 0;
+}
+
+.product-boxes {
+  display: flex;
+  gap: 30px;
+}
+
+.product-boxes > div {
+  flex: 1;
+}
+
+.price-tag {
+  color: black;
+  font-family: var(--main-font);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.title-price {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.color-balls span {
+  display: inline-block;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  opacity: 1;
+  transition: opacity 200ms ease;
+}
+
+.color-balls span:hover {
+  opacity: 0.5;
+}
+
+.product-details {
+  font-family: var(--main-font);
+  font-size: 16px;
+  color: black;
+}
+
+.cart-button {
+  background-color: var(--main-blue);
+  font-family: var(--main-font);
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  font-size: 22px;
+  padding: 10px 200px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.cart-button:hover {
+  background-color: white;
+  color: var(--main-blue);
+  border: 3px solid var(--main-blue);
+}
+
+.delivery-note {
+  color: var(--main-blue);
+  font-family: var(--main-font);
+  font-size: 16px;
+}
+
+.item-details {
+  padding: 30px;
 }
 
 /* RESPONSIVE RULES */
