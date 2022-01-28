@@ -512,9 +512,10 @@ footer p {
   font-size: 14px;
   color: white;
   background-color: var(--main-blue);
-  padding: 15px 40px;
+  padding: 17px 40px;
   border: 0;
   border-radius: 5px;
+  text-decoration: none;
 }
 
 .checkout-button,
@@ -611,6 +612,40 @@ form {
   margin: 0;
   margin-right: 10px;
 }
+
+.content-success {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.success-order {
+  font-family: var(--second-font);
+  font-size: 22px;
+  color: #2c7e4b;
+}
+
+.success-text,
+.tracking-text {
+  margin: 0;
+  font-family: var(--main-font);
+  font-size: 20px;
+  color: black;
+  font-weight: normal;
+}
+
+.tracking-text {
+  margin-bottom: 30px;
+}
+.newsletter-note {
+  font-family: var(--main-font);
+  font-size: 14px;
+  color: #6e6e6e;
+  font-weight: normal;
+  margin-top: 30px;
+}
+.subscribe-box {
+  text-align: center;
+}
 /* RESPONSIVE RULES */
 @media only screen and (max-width: 1200px) {
   .welcome-container {
@@ -644,10 +679,6 @@ form {
   }
 }
 @media only screen and (max-width: 1210px) {
-  .top-header {
-    padding-right: 30px;
-    padding-left: 30px;
-  }
   .page-title {
     text-align: center;
   }
