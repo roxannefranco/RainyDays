@@ -54,46 +54,60 @@
         </header>
         <main class="container-margin">
             <div class="center-content">
-                <div>
+                <div class="breadcrumbs-box">
                     <span class="breadcrumbs" >Shopping Cart > </span> 
-                    <span class="active breadcrumbs">Checkout ></span> <span>Finish</span>
+                    <span class="active breadcrumbs">Checkout ></span> <span class="breadcrumbs">Finish</span>
                 </div>
                 <div class="bg-grey">
-                    <h2 class="checkout-title">1. Shipping info</h2>
                     <form>
+                        <h1 class="checkout-title">1. Shipping info</h1>
                         <div class="input-row">
-                            <input class="input-data" type="text" placeholder="Full Name">
-                            <input class="input-data" type="email" placeholder="E-mail">
-                            <input class="input-data" type="text" placeholder="Phone Number">
+                            <input class="input-data input-flex-1" type="text" placeholder="Full Name">
+                            <input class="input-data input-flex-1" type="email" placeholder="E-mail">
+                            <input class="input-data input-flex-1" type="text" placeholder="Phone Number">
                         </div>
                         <div class="input-row">
-                            <input class="input-data" type="text" placeholder="Address">
-                            <input class="input-data" type="text" placeholder="Zip-Code">
+                            <input class="input-data input-flex-2" type="text" placeholder="Address">
+                            <input class="input-data input-flex-1" type="text" placeholder="Zip-Code">
                         </div>
                         <div class="input-row">
-                            <input class="input-data" type="text" placeholder="City">
-                            <input class="input-data" type="text" placeholder="Country">
-                            <input class="input-data" type="checkbox"> <label>Same as billing address</label>
+                            <input class="input-data input-flex-1" type="text" placeholder="City">
+                            <input class="input-data input-flex-1" type="text" placeholder="Country">
+                            <div class="check-container">
+                                <input type="checkbox">
+                                <label class="billing-label">Same as billing address</label>
+                            </div>
                         </div>
                     <h2 class="checkout-title">2. Delivery Method</h2>
                         <div class="input-row">
-                            <div class="radio-row radio-data">
-                                <input type="radio"> <label class="radio-label">Standart (3-8 weekdays)</label>
-                                <input type="radio"> <label class="radio-label">Express (2-4 weekdays)</label>
-                                <input type="radio"> <label class="radio-label">Pick up point (free)</label>
+                            <div class="radio-data input-flex-1">
+                                <input class="radio-box" type="radio" name="shipping"> <label class="radio-label">Standart (3-8 weekdays)</label>
                             </div>
+                            <div class="radio-data input-flex-1">
+                                <input class="radio-box" type="radio" name="shipping"> <label class="radio-label">Express (2-4 weekdays)</label>
+                            </div>
+                            <div class="radio-data input-flex-1">
+                                <input class="radio-box" type="radio" name="shipping"> <label class="radio-label">Pick up point (free)</label>
+                            </div> 
                         </div>
                         <h2 class="checkout-title">3. Payment</h2>
-                            <div class="input-row">
-                                <input class="input-data" type="text" placeholder="Name on Card">
-                                <input class="input-data" type="text" placeholder="Card Number">
-                             </div>
-                             <div class="input-row">
-                                <input class="input-data" type="text" placeholder="MM/YY">
-                                <input class="input-data" type="text" placeholder="CVC">
-                                <input type="checkbox"> <label>Save info for next purchase</label>
-                             </div>
+                        <div class="input-row">
+                            <input class="input-data input-flex-1" type="text" placeholder="Name on Card">
+                            <input class="input-data input-flex-2" type="text" placeholder="Card Number">
+                        </div>
+                        <div class="input-row">
+                            <input class="input-data input-flex-1" type="text" placeholder="MM/YY">
+                            <input class="input-data" type="text" placeholder="CVC">
+                            <div class="check-container">
+                                <input type="checkbox">
+                                <label class="billing-label">Save info for next purchase</label>
+                            </div>
+                        </div>
                     </form>
+                    <div>
+                        <a href="#" class="checkout-button">Confirm & Pay > </a>
+                <a href="cart.html" class="keep-shopping-button">Return to Cart < </a>
+                    </div>
                 </div>
             </div>
          </main>

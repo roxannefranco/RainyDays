@@ -389,6 +389,9 @@ footer p {
   font-family: var(--second-font);
 }
 
+.breadcrumbs-box {
+  padding-bottom: 20px;
+}
 .breadcrumbs {
   font-family: var(--main-font);
   color: #024059;
@@ -537,34 +540,76 @@ footer p {
   border: 1px solid #c4c4c4;
 }
 
+form {
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 0 30px 0;
+}
 .checkout-title {
   font-family: var(--second-font);
   color: var(--main-blue);
   font-size: 20px;
+  margin: 10px;
 }
 .radio-data {
+  display: flex;
+  background-color: white;
+  border: 1px solid var(--dark-grey);
+  border-radius: 5px;
+  padding: 10px;
+  align-items: center;
+}
+.radio-data input {
+  margin-right: 10px;
+}
+.billing-label,
+.radio-label {
+  display: flex;
+  font-family: var(--main-font);
+  font-size: 14px;
+  color: black;
+  align-items: center;
+}
+.radio-label {
+  color: #6e6e6e;
+}
+
+.radio-box {
+  margin: 0;
+  align-items: center;
+}
+.input-data {
+  flex: 1;
+  font-family: var(--main-font);
+  font-size: 14px;
+  color: #6e6e6e;
   display: inline-block;
   background-color: white;
   border: 1px solid var(--dark-grey);
   border-radius: 5px;
   padding: 10px;
 }
-.radio-label {
-  font-family: var(--main-font);
-  font-size: 14px;
-  color: #6e6e6e;
-  padding: 20px;
-}
-
-.input-data {
-  flex: 1;
-  font-family: var(--main-font);
-  font-size: 14px;
-  color: #6e6e6e;
-}
 
 .input-row {
   display: flex;
+  margin: 10px 0;
+  gap: 10px;
+}
+.input-flex-1 {
+  flex: 1;
+}
+.input-flex-2 {
+  flex: 2;
+}
+
+.check-container {
+  display: flex;
+}
+
+.check-container input {
+  margin: 0;
+  margin-right: 10px;
 }
 /* RESPONSIVE RULES */
 @media only screen and (max-width: 1200px) {
@@ -658,6 +703,23 @@ footer p {
   }
   .title {
     padding: 20px;
+  }
+}
+@media only screen and (max-width: 815px) {
+  form {
+    padding: 20px;
+  }
+  .input-row {
+    display: block;
+    margin: 0;
+  }
+  .input-data {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+  }
+  .check-container {
+    margin: 10px 0 15px 0;
   }
 }
 @media only screen and (max-width: 960px) {
