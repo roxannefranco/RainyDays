@@ -508,6 +508,7 @@ footer p {
 }
 
 .apply-button {
+  display: inline-block;
   font-family: var(--main-font);
   font-size: 14px;
   color: white;
