@@ -717,6 +717,51 @@ form {
   width: 100%;
   object-fit: cover;
 }
+.input-parent {
+  display: flex;
+}
+.input-parent input {
+  margin-right: 10px;
+}
+.center-content h2 {
+  font-family: var(--second-font);
+  font-size: 20px;
+  color: var(--main-blue);
+}
+.center-content h1,
+.center-content h2 {
+  text-align: center;
+}
+.contact-text {
+  text-align: center;
+}
+
+.contact-text p {
+  margin: 0;
+  padding-top: 20px;
+  font-family: var(--main-font);
+  font-size: 14px;
+  color: black;
+}
+
+.contact-text p a {
+  text-decoration: none;
+  color: var(--main-blue);
+  font-weight: bold;
+}
+textarea {
+  height: 250px;
+  width: 730px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+.button-message {
+  margin-top: 25px;
+  margin-bottom: 20px;
+  text-align: right;
+}
+
 /* RESPONSIVE RULES */
 @media only screen and (max-width: 1200px) {
   .welcome-container {
@@ -750,7 +795,8 @@ form {
   }
 }
 @media only screen and (max-width: 1210px) {
-  .page-title {
+  .page-title,
+  .center-content h2 {
     text-align: center;
   }
   .shop-items {
@@ -838,6 +884,9 @@ form {
     padding-top: 10px;
     text-align: center;
   }
+  .input-parent {
+    display: block;
+  }
 }
 @media only screen and (max-width: 960px) {
   .product-boxes {
@@ -851,6 +900,9 @@ form {
 
   .title-price {
     margin-top: 30px;
+  }
+  .contact-text p {
+    margin: 20px 30px;
   }
 }
 @media only screen and (max-width: 620px) {
