@@ -723,13 +723,12 @@ form {
 .input-parent input {
   margin-right: 10px;
 }
-.center-content h2 {
+.h2-contact {
   font-family: var(--second-font);
   font-size: 20px;
   color: var(--main-blue);
 }
-.center-content h1,
-.center-content h2 {
+.h1-contact .h2-contact {
   text-align: center;
 }
 .contact-text {
@@ -796,7 +795,7 @@ textarea {
 }
 @media only screen and (max-width: 1210px) {
   .page-title,
-  .center-content h2 {
+  .h2-contact {
     text-align: center;
   }
   .shop-items {
