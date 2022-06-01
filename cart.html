@@ -1,139 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="Shopping cart content">
-        <meta name="keywords" content="Items, purchase, cart">
-        <meta name="author" content="Roxanne Franco">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
-        <link rel="stylesheet" href="css/styles.css">
-        <link rel="stylesheet" href="css/all.css">
-        <title>Your Cart</title>
-    </head>
-    <body class="page-shop">
-        <!--HEADER-->
-        <header>
-        <div class="center-content">
-            <div class="top-header">
-            <nav class="menu">
-                <ul>
-                <li>
-                    <a href="index.html">HOME</a>
-                </li>
-                <li>
-                    <a href="about.html">ABOUT</a>
-                </li>
-                <li>
-                    <a class="active" href="shop.html">SHOP</a>
-                </li>
-                <li>
-                    <a href="contact.html">CONTACTS</a>
-                </li>
-                </ul>
-            </nav>
-            <!--LOGO-->
-            <div class="logo">
-                <img src="images/logo.png" alt="logo">
-            </div>
-            <!--SEARCH AND CART-->
-            <div class="search-cart">
-                <ul>
-                <li>
-                    <a href="#"><i class="fas fa-search"></i></a>
-                </li>
-                <li>
-                    <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
-                </li>
-                </ul>
-            </div>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Shopping cart content" />
+    <meta name="keywords" content="Items, purchase, cart" />
+    <meta name="author" content="Roxanne Franco" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <title>Your Cart</title>
+  </head>
+  <body class="page-shop">
+    <!--HEADER-->
+    <header>
+      <div class="center-content">
+        <div class="top-header">
+          <nav class="menu">
+            <ul>
+              <li>
+                <a href="index.html">HOME</a>
+              </li>
+              <li>
+                <a href="about.html">ABOUT</a>
+              </li>
+              <li>
+                <a class="active" href="shop.html">SHOP</a>
+              </li>
+              <li>
+                <a href="contact.html">CONTACTS</a>
+              </li>
+            </ul>
+          </nav>
+          <!--LOGO-->
+          <div class="logo">
+            <img src="images/logo.png" alt="logo" />
+          </div>
+          <!--SEARCH AND CART-->
+          <div class="search-cart">
+            <ul>
+              <li>
+                <a href="#"><i class="fas fa-search"></i></a>
+              </li>
+              <li>
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+              </li>
+            </ul>
+          </div>
         </div>
-        </header>
-        <main class="container-margin">
-            <div class="center-content">
-                <div>
-                    <span class="active breadcrumbs" >Shopping Cart > </span> 
-                    <span class="breadcrumbs">Checkout > Finish</span>
-                </div>
-                <div>
-                    <h1 class="page-title cart-title">Your Cart</h1>
-                </div>
-                <div class="bg-grey cart-box">
-                    <div class="product-row">
-                        <div class="image-box">
-                            <img src="images/finland.png" alt="white jacket">
-                            <span>1</span>
-                        </div>
-                        <h2 class="title">Finland Puffer Jacket</h2>
-                        <div class="container-size-color-price">
-                            <span class="unique-size">M</span>
-                            <span class="unique-color" style="background-color: #DED7C4"></span>
-                            <h3 class="price">1799kr</h3>
-                            <a class="trash-icon" href="#"><i class="far fa-trash-alt"></i></a>
-                        </div>
-                    </div>
-                    <div class="product-row">
-                        <div class="image-box">
-                            <img src="images/svalbard.png" alt="red jacket">
-                            <span>1</span>
-                        </div>
-                        <h2 class="title">Svalbard Puffer Jacket</h2>
-                        <div class="container-size-color-price">
-                            <span class="unique-size">M</span>
-                            <span class="unique-color" style="background-color: #E11B20"></span>
-                            <h3 class="price">1499kr</h3>
-                            <a class="trash-icon" href="#"><i class="far fa-trash-alt"></i></a>
-                        </div>
-                    </div>
-                    <div class="preview-box">
-                        <div class="preview-details">
-                            <div class="subtotal-detail">
-                                <span class="first-column">Subtotal</span> 
-                                <span>3298kr</span>
-                            </div>
-                            <div class="shipping-detail">
-                                <span class="first-column">Shipping</span> 
-                                <span>Calculated at Checkout</span>
-                            </div>
-                            <div class="total-detail">
-                                <span class="unique-total first-column">total</span> 
-                                <span class="unique-total">3298nok</span>
-                            </div>
-                        </div>
-                        <div class="discount-code">
-                            <div>
-                                <input class="discount-input" type="text" placeholder="Insert discount code here">
-                                <a href="#" class="apply-button">Apply</a>
-                            </div>    
-                        </div>
-                    </div>
-                </div>
-                <!--buttons-->
-                <a href="checkout.html" class="checkout-button">Proceed to Checkout &gt; </a>
-                <a href="shop.html" class="keep-shopping-button">&lt; Keep Shopping</a>
+      </div>
+    </header>
+    <main class="container-margin">
+      <div class="center-content">
+        <div>
+          <span class="active breadcrumbs">Shopping Cart > </span>
+          <span class="breadcrumbs">Checkout > Finish</span>
+        </div>
+        <div>
+          <h1 class="page-title cart-title">Your Cart</h1>
+        </div>
+        <div class="bg-grey cart-box">
+          <div class="product-row">
+            <div class="image-box">
+              <img src="images/finland.png" alt="white jacket" />
+              <span>1</span>
             </div>
-        </main>
-        <!--FOOTER-->
-        <footer>
-            <div class="copyrights">
-                <p>&copy; RainyDays 2021. All rights reserved.</p>
+            <h2 class="title">Finland Puffer Jacket</h2>
+            <div class="container-size-color-price">
+              <span class="unique-size">M</span>
+              <span class="unique-color" style="background-color: #ded7c4"></span>
+              <h3 class="price">1799kr</h3>
+              <a class="trash-icon" href="#"><i class="far fa-trash-alt"></i></a>
             </div>
-            <div class="socials">
-                <ul>
-                    <li>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </li>
-                </ul>
+          </div>
+          <div class="product-row">
+            <div class="image-box">
+              <img src="images/svalbard.png" alt="red jacket" />
+              <span>1</span>
             </div>
+            <h2 class="title">Svalbard Puffer Jacket</h2>
+            <div class="container-size-color-price">
+              <span class="unique-size">M</span>
+              <span class="unique-color" style="background-color: #e11b20"></span>
+              <h3 class="price">1499kr</h3>
+              <a class="trash-icon" href="#"><i class="far fa-trash-alt"></i></a>
+            </div>
+          </div>
+          <div class="preview-box">
+            <div class="preview-details">
+              <div class="subtotal-detail">
+                <span class="first-column">Subtotal</span>
+                <span>3298kr</span>
+              </div>
+              <div class="shipping-detail">
+                <span class="first-column">Shipping</span>
+                <span>Calculated at Checkout</span>
+              </div>
+              <div class="total-detail">
+                <span class="unique-total first-column">total</span>
+                <span class="unique-total">3298nok</span>
+              </div>
+            </div>
+            <div class="discount-code">
+              <div>
+                <input class="discount-input" type="text" placeholder="Insert discount code here" />
+                <a href="#" class="apply-button">Apply</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--buttons-->
+        <a href="checkout.html" class="checkout-button">Proceed to Checkout &gt; </a>
+        <a href="shop.html" class="keep-shopping-button">&lt; Keep Shopping</a>
+      </div>
+    </main>
+    <!--FOOTER-->
+    <footer>
+      <div class="copyrights">
+        <p>&copy; RainyDays 2021. All rights reserved.</p>
+      </div>
+      <div class="socials">
+        <ul>
+          <li>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </li>
+        </ul>
+      </div>
     </footer>
-    </body>
+  </body>
 </html>

@@ -214,13 +214,17 @@ footer p {
   gap: 10px;
 }
 
+.shop-item-container {
+  flex-grow: 1;
+  width: calc(33.3333% - 10px);
+}
+
 .shop-item {
   background-color: var(--grey);
   text-align: center;
   padding: 40px;
   box-sizing: border-box;
-  flex-grow: 1;
-  width: calc(33.3333% - 10px);
+  display: block;
   text-decoration: none;
   transition: background-color 200ms ease;
 }
@@ -367,6 +371,12 @@ footer p {
   display: block;
   margin-top: 20px;
   text-align: center;
+}
+
+.cart-all {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .cart-button:hover {
