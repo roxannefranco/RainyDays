@@ -1,10 +1,11 @@
 // importing array of products
-import { products } from "./productList.js";
+import { products } from "./productsList.js";
 console.log(products);
 
 const productsContainer = document.querySelector(".shop-items");
 const cartLateral = document.querySelector("#cart-lateral");
 const cartList = document.querySelector(".cart-list");
+const totalContainer = document.querySelector(".total");
 
 // adding imported products into the shop page
 products.forEach(function (product) {
@@ -13,7 +14,7 @@ products.forEach(function (product) {
     <a href="product.html" class="shop-item">
         <img class="image-size" src="${product.image}" alt="yellow and grey jacket" />
         <h2 class="item-title">${product.name}</h2>
-        <h3 class="item-price">${product.price}</h3>  
+        <h3 class="item-price">${product.price}kr</h3>  
     </a>
     <button class="cart-button cart-all" data-product="${product.id}">Add to cart</button>
     </div>
@@ -34,6 +35,7 @@ buttons.forEach(function (button) {
     cart.push(addItem);
     // Call a method to show the cart
     showCart(cart);
+    localStorage.setItem("cartList", JSON.stringify(cart));
     // Invokes updateCartTotal method (without any arguments)
     updateCartTotal();
   };
@@ -41,18 +43,21 @@ buttons.forEach(function (button) {
 
 // Show lateral cart on the side when adding items
 function showCart(cartItems) {
-  cartLateral.style.display = "block";
+  cartLateral.style.display = "flex";
   cartList.innerHTML = "";
+  let total = 0;
   cartItems.forEach(function (cartElement) {
+    total += cartElement.price;
     cartList.innerHTML += `
     <div class="cart-item">
     <h4>${cartElement.name}</h4>
     <img class="cart-image image-size" src="${cartElement.image}" alt="yellow and grey jacket" />
     </div>`;
-    // missing price for each item and total price of items
   });
+
+  totalContainer.innerHTML = `Total: ${total}kr`;
 }
-// targetting the span
+// targetting the total span
 let cartTotal = document.querySelector("#total-items");
 // Method used to update the cart total span with number of items
 function updateCartTotal() {

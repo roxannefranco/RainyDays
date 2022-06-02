@@ -65,37 +65,12 @@
           <h1 class="page-title cart-title">Your Cart</h1>
         </div>
         <div class="bg-grey cart-box">
-          <div class="product-row">
-            <div class="image-box">
-              <img src="images/finland.png" alt="white jacket" />
-              <span>1</span>
-            </div>
-            <h2 class="title">Finland Puffer Jacket</h2>
-            <div class="container-size-color-price">
-              <span class="unique-size">M</span>
-              <span class="unique-color" style="background-color: #ded7c4"></span>
-              <h3 class="price">1799kr</h3>
-              <a class="trash-icon" href="#"><i class="far fa-trash-alt"></i></a>
-            </div>
-          </div>
-          <div class="product-row">
-            <div class="image-box">
-              <img src="images/svalbard.png" alt="red jacket" />
-              <span>1</span>
-            </div>
-            <h2 class="title">Svalbard Puffer Jacket</h2>
-            <div class="container-size-color-price">
-              <span class="unique-size">M</span>
-              <span class="unique-color" style="background-color: #e11b20"></span>
-              <h3 class="price">1499kr</h3>
-              <a class="trash-icon" href="#"><i class="far fa-trash-alt"></i></a>
-            </div>
-          </div>
+          <div class="cart-list"></div>
           <div class="preview-box">
             <div class="preview-details">
               <div class="subtotal-detail">
                 <span class="first-column">Subtotal</span>
-                <span>3298kr</span>
+                <span class="total">kr</span>
               </div>
               <div class="shipping-detail">
                 <span class="first-column">Shipping</span>
@@ -103,14 +78,9 @@
               </div>
               <div class="total-detail">
                 <span class="unique-total first-column">total</span>
-                <span class="unique-total">3298nok</span>
+                <span class="unique-total total-value"></span>
               </div>
             </div>
-            <div class="discount-code">
-              <div>
-                <input class="discount-input" type="text" placeholder="Insert discount code here" />
-                <a href="#" class="apply-button">Apply</a>
-              </div>
             </div>
           </div>
         </div>
@@ -138,5 +108,6 @@
         </ul>
       </div>
     </footer>
+    <script src="js/cart.js" type="module"></script>
   </body>
 </html>

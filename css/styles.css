@@ -95,6 +95,11 @@ footer p {
   bottom: 0;
   width: 400px;
   display: none;
+  flex-direction: column;
+}
+
+.cart-list {
+  flex: 1;
 }
 
 #cart-lateral h2 {
@@ -107,6 +112,10 @@ footer p {
   width: 100px;
   height: 100px;
   background-size: cover;
+}
+
+.cart-checkout {
+  margin-bottom: 150px;
 }
 
 .top-header {
