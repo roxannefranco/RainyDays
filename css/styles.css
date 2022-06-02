@@ -87,6 +87,28 @@ footer p {
   flex: 1;
   text-align: right;
 }
+
+#cart-lateral {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 400px;
+  display: none;
+}
+
+#cart-lateral h2 {
+  position: fixed;
+  bottom: 200px;
+  margin-left: 50px;
+}
+
+.cart-image {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+}
+
 .top-header {
   display: flex;
   align-items: center;
