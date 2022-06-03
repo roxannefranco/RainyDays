@@ -1,17 +1,18 @@
 // importing array of products
 import { products } from "./productsList.js";
-console.log(products);
 
 const productsContainer = document.querySelector(".shop-items");
 const cartLateral = document.querySelector("#cart-lateral");
 const cartList = document.querySelector(".cart-list");
 const totalContainer = document.querySelector(".total");
+// targetting the total span
+const cartTotal = document.querySelector("#total-items");
 
 // adding imported products into the shop page
 products.forEach(function (product) {
   productsContainer.innerHTML += `
   <div class="shop-item-container">
-    <a href="product.html" class="shop-item">
+    <a href="product.html?id=${product.id}" class="shop-item">
         <img class="image-size" src="${product.image}" alt="yellow and grey jacket" />
         <h2 class="item-title">${product.name}</h2>
         <h3 class="item-price">${product.price}kr</h3>  
@@ -25,14 +26,31 @@ products.forEach(function (product) {
 const buttons = document.querySelectorAll(".cart-button");
 let cart = [];
 
+// check if local storage has any products
+const cartStorage = JSON.parse(localStorage.getItem("cartList"));
+if (cartStorage != null) {
+  cart = cartStorage;
+  updateCartTotal();
+}
+
 // Loops through all buttons and adds event listener to each
 buttons.forEach(function (button) {
   // Add an event listener to each button (for click event)
   button.onclick = function (event) {
     // Get the id of the product that was clicked
-    const addItem = products.find((item) => item.id === event.target.dataset.product);
-    // Add the product to the cart
-    cart.push(addItem);
+    const dataId = event.target.dataset.product;
+    const addItem = products.find((item) => item.id === dataId);
+    const itemInCart = cart.find((item) => item.id === dataId);
+    if (itemInCart == null) {
+      // Add the product to the cart
+      addItem.quantity = 1;
+      cart.push(addItem);
+    } else {
+      // count +1
+      const index = cart.indexOf(itemInCart);
+      cart[index].quantity += 1;
+    }
+    console.log(cart);
     // Call a method to show the cart
     showCart(cart);
     localStorage.setItem("cartList", JSON.stringify(cart));
@@ -47,20 +65,23 @@ function showCart(cartItems) {
   cartList.innerHTML = "";
   let total = 0;
   cartItems.forEach(function (cartElement) {
-    total += cartElement.price;
+    total += cartElement.price * cartElement.quantity;
     cartList.innerHTML += `
     <div class="cart-item">
-    <h4>${cartElement.name}</h4>
+    <h4>${cartElement.name}x${cartElement.quantity}</h4>
     <img class="cart-image image-size" src="${cartElement.image}" alt="yellow and grey jacket" />
     </div>`;
   });
 
   totalContainer.innerHTML = `Total: ${total}kr`;
 }
-// targetting the total span
-let cartTotal = document.querySelector("#total-items");
+
 // Method used to update the cart total span with number of items
 function updateCartTotal() {
+  let total = 0;
+  cart.forEach(function (product) {
+    total += product.quantity;
+  });
   // adding to the span the number of items in the cart
-  cartTotal.innerHTML = cart.length;
+  cartTotal.innerHTML = total;
 }

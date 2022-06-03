@@ -102,6 +102,10 @@ footer p {
   flex: 1;
 }
 
+i {
+  pointer-events: none;
+}
+
 #cart-lateral h2 {
   position: fixed;
   bottom: 200px;
