@@ -62,12 +62,14 @@ buttonCart.onclick = function (event) {
   const dataId = event.target.dataset.product;
   const addItem = products.find((item) => item.id === dataId);
   const itemInCart = cart.find((item) => item.id === dataId);
+
+  // if item is NOT on the cart
   if (itemInCart == null) {
-    // Add the product to the cart
+    // Adds the product to the cart for first time
     addItem.quantity = 1;
     cart.push(addItem);
   } else {
-    // count +1
+    // if IT is then count +1
     const index = cart.indexOf(itemInCart);
     cart[index].quantity += 1;
   }
@@ -87,7 +89,7 @@ function showCart(cartItems) {
     total += cartElement.price * cartElement.quantity;
     cartList.innerHTML += `
       <div class="cart-item">
-      <h4>${cartElement.name}x${cartElement.quantity}</h4>
+      <h4>${cartElement.name} x${cartElement.quantity}</h4>
       <img class="cart-image image-size" src="${cartElement.image}" alt="yellow and grey jacket" />
       </div>`;
   });
