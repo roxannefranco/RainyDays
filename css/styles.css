@@ -100,7 +100,7 @@ footer p {
 
 .cart-list {
   flex: 1;
-  padding: 40px;
+  padding: 10px;
 }
 
 a.checkout-button.cart-checkout {
@@ -602,6 +602,9 @@ a {
   display: block;
   margin-top: 10px;
   text-align: center;
+  border: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 .checkout-button {
   background-color: #075725;

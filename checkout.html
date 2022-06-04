@@ -63,20 +63,21 @@
         </div>
         <div class="bg-grey">
           <!--SHIPPING-->
-          <form>
+          <div id="success"></div>
+          <form id="contact-form">
             <h1 class="checkout-title">1. Shipping info</h1>
             <div class="input-row">
-              <input class="input-data input-flex-1" type="text" placeholder="Full Name" />
-              <input class="input-data input-flex-1" type="email" placeholder="E-mail" />
-              <input class="input-data input-flex-1" type="text" placeholder="Phone Number" />
+              <input id="name" class="input-data input-flex-1" type="text" placeholder="Full Name" />
+              <input id="email" class="input-data input-flex-1" type="email" placeholder="E-mail" />
+              <input id="number" class="input-data input-flex-1" type="text" placeholder="Phone Number" />
             </div>
             <div class="input-row">
-              <input class="input-data input-flex-2" type="text" placeholder="Address" />
-              <input class="input-data input-flex-1" type="text" placeholder="Zip-Code" />
+              <input id="address" class="input-data input-flex-2" type="text" placeholder="Address" />
+              <input id="zip-code" class="input-data input-flex-1" type="text" placeholder="Zip-Code" />
             </div>
             <div class="input-row">
-              <input class="input-data input-flex-1" type="text" placeholder="City" />
-              <input class="input-data input-flex-1" type="text" placeholder="Country" />
+              <input id="city" class="input-data input-flex-1" type="text" placeholder="City" />
+              <input id="country" class="input-data input-flex-1" type="text" placeholder="Country" />
               <div class="check-container">
                 <input type="checkbox" />
                 <label class="billing-label">Same as billing address</label>
@@ -101,22 +102,22 @@
             <!--PAYMENT-->
             <h2 class="checkout-title">3. Payment</h2>
             <div class="input-row">
-              <input class="input-data input-flex-1" type="text" placeholder="Name on Card" />
-              <input class="input-data input-flex-2" type="text" placeholder="Card Number" />
+              <input id="name-card" class="input-data input-flex-1" type="text" placeholder="Name on Card" />
+              <input id="card-number" class="input-data input-flex-2" type="text" placeholder="Card Number" />
             </div>
             <div class="input-row">
-              <input class="input-data input-flex-1" type="text" placeholder="MM/YY" />
-              <input class="input-data" type="text" placeholder="CVC" />
+              <input id="card-date" class="input-data input-flex-1" type="text" placeholder="MM/YY" />
+              <input id="card-cvc" class="input-data" type="text" placeholder="CVC" />
               <div class="check-container">
                 <input type="checkbox" />
                 <label class="billing-label">Save info for next purchase</label>
               </div>
             </div>
-          </form>
-          <div>
-            <a href="success.html" class="checkout-button">Confirm & Pay &gt;</a>
+            <ul id="errors"></ul>
+            <button class="checkout-button" type="submit">Confirm & Pay &gt;</button>
             <a href="cart.html" class="keep-shopping-button">&lt; Return to Cart</a>
-          </div>
+          </form>
+          <div></div>
         </div>
       </div>
     </main>
@@ -139,5 +140,6 @@
         </ul>
       </div>
     </footer>
+    <script src="js/checkout.js" type="module"></script>
   </body>
 </html>
