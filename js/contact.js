@@ -41,11 +41,6 @@ form.onsubmit = (event) => {
     errors.push("Message required.");
   }
 
-  // test address
-  if (address.value.trim().length < 25) {
-    errors.push("Address requires at least 25 characters");
-  }
-
   // verifying if there is errors
   if (errors.length) {
     let content = "";

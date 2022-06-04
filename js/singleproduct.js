@@ -106,3 +106,9 @@ function updateCartTotal() {
   // adding to the span the number of items in the cart
   cartTotal.innerHTML = total;
 }
+
+// adding a closing button for lateral cart
+const closeButton = document.querySelector("#close-button");
+closeButton.onclick = function () {
+  cartLateral.style.display = "none";
+};

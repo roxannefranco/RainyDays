@@ -63,7 +63,7 @@ form.onsubmit = (event) => {
 
   // test country field
   if (country.value.trim().length < 1) {
-    errors.push("City required.");
+    errors.push("Country required.");
   }
 
   // test name-card field

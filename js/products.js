@@ -5,6 +5,7 @@ const productsContainer = document.querySelector(".shop-items");
 const cartLateral = document.querySelector("#cart-lateral");
 const cartList = document.querySelector(".cart-list");
 const totalContainer = document.querySelector(".total");
+
 // targetting the total span
 const cartTotal = document.querySelector("#total-items");
 
@@ -68,7 +69,7 @@ function showCart(cartItems) {
     total += cartElement.price * cartElement.quantity;
     cartList.innerHTML += `
     <div class="cart-item">
-    <h4>${cartElement.name}<span> x${cartElement.quantity}</span></h4>
+    <h4>${cartElement.name}<span> X ${cartElement.quantity}</span></h4>
     <img class="cart-image image-size" src="${cartElement.image}" alt="yellow and grey jacket" />
     </div>`;
   });
@@ -85,3 +86,9 @@ function updateCartTotal() {
   // adding to the span the number of items in the cart
   cartTotal.innerHTML = total;
 }
+
+// adding a closing button for lateral cart
+const closeButton = document.querySelector("#close-button");
+closeButton.onclick = function () {
+  cartLateral.style.display = "none";
+};
