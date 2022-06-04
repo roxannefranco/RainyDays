@@ -1,100 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="Contact page with form">
-        <meta name="keywords" content="contact, form, support, phone, email, socials">
-        <meta name="author" content="Roxanne Franco">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
-        <link rel="stylesheet" href="css/styles.css">
-        <link rel="stylesheet" href="css/all.css">
-        <title>Contact us</title>
-    </head>
-    <body class="page-shop">
-        <!--HEADER-->
-        <header>
-            <div class="center-content">
-                <div class="top-header">
-                <nav class="menu">
-                    <ul>
-                    <li>
-                        <a href="index.html">HOME</a>
-                    </li>
-                    <li>
-                        <a href="about.html">ABOUT</a>
-                    </li>
-                    <li>
-                        <a href="shop.html">SHOP</a>
-                    </li>
-                    <li>
-                        <a class="active" href="contact.html">CONTACTS</a>
-                    </li>
-                    </ul>
-                </nav>
-                <!--LOGO-->
-                <div class="logo">
-                    <img src="images/logo.png" alt="logo">
-                </div>
-                <!--SEARCH AND CART-->
-                <div class="search-cart">
-                    <ul>
-                    <li>
-                        <a href="#"><i class="fas fa-search"></i></a>
-                    </li>
-                    <li>
-                        <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
-                    </li>
-                    </ul>
-                    </div>
-                </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Contact page with form" />
+    <meta name="keywords" content="contact, form, support, phone, email, socials" />
+    <meta name="author" content="Roxanne Franco" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <title>Contact us</title>
+  </head>
+  <body class="page-shop">
+    <!--HEADER-->
+    <header>
+      <div class="center-content">
+        <div class="top-header">
+          <nav class="menu">
+            <ul>
+              <li>
+                <a href="index.html">HOME</a>
+              </li>
+              <li>
+                <a href="about.html">ABOUT</a>
+              </li>
+              <li>
+                <a href="shop.html">SHOP</a>
+              </li>
+              <li>
+                <a class="active" href="contact.html">CONTACTS</a>
+              </li>
+            </ul>
+          </nav>
+          <!--LOGO-->
+          <div class="logo">
+            <img src="images/logo.png" alt="logo" />
+          </div>
+          <!--SEARCH AND CART-->
+          <div class="search-cart">
+            <ul>
+              <li>
+                <a href="#"><i class="fas fa-search"></i></a>
+              </li>
+              <li>
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="container-margin">
+      <div class="center-content">
+        <h1 class="h1-contact page-title">Contact us</h1>
+        <h2 class="h2-contact">Wondering about something?</h2>
+        <div class="bg-grey">
+          <div class="contact-text">
+            <p>Customer Support available from 9:00-20:00: <span style="font-weight: bold">210 000 000</span></p>
+            <p>Find us on <a href="#">Facebook</a>, <a href="#">Twitter</a> or <a href="#">Instagram</a>!</p>
+            <p>
+              Or send us a message by filling the <span style="font-weight: bold">form bellow</span> and we’ll get back
+              to you as soon as possible!
+            </p>
+          </div>
+          <div id="success"></div>
+          <form id="contact-form">
+            <div class="input-parent">
+              <input id="name" class="input-data input-flex-1" type="text" placeholder="Your name" />
+              <input id="email" class="input-data input-flex-1" type="email" placeholder="E-mail" />
+              <input
+                id="order"
+                class="input-data input-flex-1"
+                type="text"
+                placeholder="Order number (if applicable)"
+              />
             </div>
-        </header>
-        <main class="container-margin">
-            <div class="center-content">
-                <h1 class=" h1-contact page-title">Contact us</h1>
-                <h2 class="h2-contact">Wondering about something?</h2>
-                <div class="bg-grey">
-                    <div class="contact-text">
-                        <p>Customer Support available from 9:00-20:00: <span style="font-weight: bold;">210 000 000</span></p>
-                        <p>Find us on <a href="#">Facebook</a>, <a href="#">Twitter</a> or <a href="#">Instagram</a>!</p>
-                        <p>Or send us a message by filling the <span style="font-weight: bold;">form bellow</span> and we’ll get back to you as soon as possible!</p>
-                    </div>
-                    <form>
-                        <div class="input-parent">
-                            <input class="input-data input-flex-1" type="text" placeholder="Your name">
-                            <input class="input-data input-flex-1" type="email" placeholder="E-mail">
-                            <input class="input-data input-flex-1" type="text" placeholder="Order number (if applicable)">
-                            
-                        </div>
-                        <textarea style="resize:none;" class="input-data input-flex-1" placeholder="Your Message"></textarea>
-                        <div class="button-message">
-                            <a href="#" class="apply-button">Send Message</a>
-                        </div>    
-                    </form>
-                </div>
+            <textarea
+              id="text-area"
+              style="resize: none"
+              class="input-data input-flex-1"
+              placeholder="Your Message"
+            ></textarea>
+            <div class="button-message">
+              <button type="submit" class="apply-button">Send Message</button>
             </div>
-        </main>
-        <!--FOOTER-->
+            <ul id="errors"></ul>
+          </form>
+        </div>
+      </div>
+    </main>
+    <!--FOOTER-->
     <footer>
-        <div class="copyrights">
-          <p>&copy; RainyDays 2021. All rights reserved.</p>
-        </div>
-        <div class="socials">
-          <ul>
-            <li>
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-            </li>
-          </ul>
-        </div>
-      </footer>
-    </body>
-  </html>
+      <div class="copyrights">
+        <p>&copy; RainyDays 2021. All rights reserved.</p>
+      </div>
+      <div class="socials">
+        <ul>
+          <li>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="js/contact.js" type="module"></script>
+  </body>
+</html>

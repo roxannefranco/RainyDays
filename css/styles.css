@@ -587,6 +587,12 @@ i {
   border: 1px solid #c4c4c4;
 }
 
+#errors li {
+  font-family: var(--second-font);
+  font-size: 20px;
+  color: red;
+}
+
 form {
   max-width: 750px;
   margin-left: auto;
@@ -648,6 +654,14 @@ form {
 }
 .input-flex-2 {
   flex: 2;
+}
+
+#success {
+  font-family: var(--second-font);
+  font-size: 30px;
+  color: green;
+  text-align: center;
+  margin: 30px;
 }
 
 .check-container {
