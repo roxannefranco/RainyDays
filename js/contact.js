@@ -9,21 +9,28 @@ form.onsubmit = (event) => {
 
   const errorsContainer = document.querySelector("#errors");
   const success = document.querySelector("#success");
+  let hasErrors = false;
 
-  // to clean previous submission
-  errorsContainer.innerHTML = "";
-  success.innerHTML = "";
+  // cleaning all error messages
+  const errorMsg = document.querySelectorAll(".error-msg");
+  errorMsg.forEach(function (msg) {
+    msg.innerHTML = "";
+  });
 
   const errors = [];
 
   // test name field
   if (name.value.trim().length < 1) {
-    errors.push("Name required.");
+    hasErrors = true;
+    const nameError = document.querySelector(".name-error");
+    nameError.innerHTML = "Name required.";
   }
 
   //test order field
   if (order.value.trim().length < 5) {
-    errors.push("Order number must have 5 characters.");
+    hasErrors = true;
+    const orderError = document.querySelector(".order-error");
+    orderError.innerHTML = "order number required.";
   }
 
   // test email field using regex
@@ -33,23 +40,22 @@ form.onsubmit = (event) => {
       /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     )
   ) {
-    errors.push("Please insert valid email.");
+    hasErrors = true;
+    const emailError = document.querySelector(".email-error");
+    emailError.innerHTML = "Please insert valid email.";
   }
 
   // test text-area field
   if (textArea.value.trim().length < 1) {
-    errors.push("Message required.");
+    hasErrors = true;
+    const textAreaError = document.querySelector(".textarea-error");
+    textAreaError.innerHTML = "Message required.";
   }
 
-  // verifying if there is errors
-  if (errors.length) {
-    let content = "";
-    for (let i = 0; i < errors.length; i++) {
-      content += `<li><strong>${errors[i]}</strong></li>`;
-    }
-    errorsContainer.innerHTML = content;
-  } else {
-    // if there is no error, then success
+  // loop to look for errors
+  if (!hasErrors) {
+    // no errors then success message
     success.innerHTML = "Form submitted with success!";
+    document.getElementById("contact-form").reset();
   }
 };

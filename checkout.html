@@ -67,17 +67,38 @@
           <form id="contact-form">
             <h1 class="checkout-title">1. Shipping info</h1>
             <div class="input-row">
-              <input id="name" class="input-data input-flex-1" type="text" placeholder="Full Name" />
-              <input id="email" class="input-data input-flex-1" type="email" placeholder="E-mail" />
-              <input id="number" class="input-data input-flex-1" type="text" placeholder="Phone Number" />
+              <div class="input-flex-1">
+                <input id="name" class="input-data" type="text" placeholder="Full Name" />
+                <span class="name-error error-msg"></span>
+              </div>
+              <div class="input-flex-1">
+                <input id="email" class="input-data input-flex-1" type="email" placeholder="E-mail" />
+                <span class="email-error error-msg"></span>
+              </div>
+              <div class="input-flex-1">
+                <input id="number" class="input-data input-flex-1" type="text" placeholder="Phone Number" />
+                <span class="number-error error-msg"></span>
+              </div>
             </div>
             <div class="input-row">
-              <input id="address" class="input-data input-flex-2" type="text" placeholder="Address" />
-              <input id="zip-code" class="input-data input-flex-1" type="text" placeholder="Zip-Code" />
+              <div class="input-flex-1">
+                <input id="address" class="input-data input-flex-2" type="text" placeholder="Address" />
+                <span class="address-error error-msg"></span>
+              </div>
+              <div class="input-flex-1">
+                <input id="zip-code" class="input-data input-flex-1" type="text" placeholder="Zip-Code" />
+                <span class="zip-error error-msg"></span>
+              </div>
             </div>
             <div class="input-row">
-              <input id="city" class="input-data input-flex-1" type="text" placeholder="City" />
-              <input id="country" class="input-data input-flex-1" type="text" placeholder="Country" />
+              <div class="input-flex-1">
+                <input id="city" class="input-data input-flex-1" type="text" placeholder="City" />
+                <span class="city-error error-msg"></span>
+              </div>
+              <div class="input-flex-1">
+                <input id="country" class="input-data input-flex-1" type="text" placeholder="Country" />
+                <span class="country-error error-msg"></span>
+              </div>
               <div class="check-container">
                 <input type="checkbox" />
                 <label class="billing-label">Same as billing address</label>
@@ -102,12 +123,24 @@
             <!--PAYMENT-->
             <h2 class="checkout-title">3. Payment</h2>
             <div class="input-row">
-              <input id="name-card" class="input-data input-flex-1" type="text" placeholder="Name on Card" />
-              <input id="card-number" class="input-data input-flex-2" type="text" placeholder="Card Number" />
+              <div class="input-flex-1">
+                <input id="name-card" class="input-data input-flex-1" type="text" placeholder="Name on Card" />
+                <span class="name-card-error error-msg"></span>
+              </div>
+              <div class="input-flex-1">
+                <input id="card-number" class="input-data input-flex-2" type="text" placeholder="XXXX-XXXX-XXXX-XXX" />
+                <span class="number-card-error error-msg"></span>
+              </div>
             </div>
             <div class="input-row">
-              <input id="card-date" class="input-data input-flex-1" type="text" placeholder="MM/YY" />
-              <input id="card-cvc" class="input-data" type="text" placeholder="CVC" />
+              <div class="input-flex-1">
+                <input id="card-date" class="input-data input-flex-1" type="text" placeholder="MM/YY" />
+                <span class="date-card-error error-msg"></span>
+              </div>
+              <div class="input-flex-1">
+                <input id="card-cvc" class="input-data" type="text" placeholder="CVC" />
+                <span class="cvc-card-error error-msg"></span>
+              </div>
               <div class="check-container">
                 <input type="checkbox" />
                 <label class="billing-label">Save info for next purchase</label>

@@ -71,21 +71,33 @@
           <div id="success"></div>
           <form id="contact-form">
             <div class="input-parent">
-              <input id="name" class="input-data input-flex-1" type="text" placeholder="Your name" />
-              <input id="email" class="input-data input-flex-1" type="email" placeholder="E-mail" />
-              <input
-                id="order"
-                class="input-data input-flex-1"
-                type="text"
-                placeholder="Order number (if applicable)"
-              />
+              <div class="input-flex-1">
+                <input id="name" class="input-data input-flex-1" type="text" placeholder="Your name" />
+                <span class="name-error error-msg"></span>
+              </div>
+              <div class="input-flex-1">
+                <input id="email" class="input-data input-flex-1" type="email" placeholder="E-mail" />
+                <span class="email-error error-msg"></span>
+              </div>
+              <div class="input-flex-1">
+                <input
+                  id="order"
+                  class="input-data input-flex-1"
+                  type="text"
+                  placeholder="Order number (if applicable)"
+                />
+                <span class="order-error error-msg"></span>
+              </div>
             </div>
-            <textarea
-              id="text-area"
-              style="resize: none"
-              class="input-data input-flex-1"
-              placeholder="Your Message"
-            ></textarea>
+            <div class="input-flex-1">
+              <textarea
+                id="text-area"
+                style="resize: none"
+                class="input-data input-flex-1"
+                placeholder="Your Message"
+              ></textarea>
+              <span class="textarea-error error-msg"></span>
+            </div>
             <div class="button-message">
               <button type="submit" class="apply-button">Send Message</button>
             </div>
