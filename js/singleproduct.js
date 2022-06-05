@@ -89,7 +89,7 @@ function showCart(cartItems) {
     total += cartElement.price * cartElement.quantity;
     cartList.innerHTML += `
       <div class="cart-item">
-      <h4>${cartElement.name} x${cartElement.quantity}</h4>
+      <h4>${cartElement.name}<span> X ${cartElement.quantity}</span></h4>
       <img class="cart-image image-size" src="${cartElement.image}" alt="yellow and grey jacket" />
       </div>`;
   });

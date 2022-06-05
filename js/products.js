@@ -55,7 +55,7 @@ buttons.forEach(function (button) {
     // Call a method to show the cart
     showCart(cart);
     localStorage.setItem("cartList", JSON.stringify(cart));
-    // Invokes updateCartTotal method (without any arguments)
+    // Invokes updateCartTotal
     updateCartTotal();
   };
 });
