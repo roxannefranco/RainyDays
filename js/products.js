@@ -1,6 +1,3 @@
-// importing array of products
-import { products } from "./productsList.js";
-
 const productsContainer = document.querySelector(".shop-items");
 const cartLateral = document.querySelector("#cart-lateral");
 const cartList = document.querySelector(".cart-list");
@@ -8,20 +5,6 @@ const totalContainer = document.querySelector(".total");
 
 // targetting the total span
 const cartTotal = document.querySelector("#total-items");
-
-// adding imported products into the shop page
-products.forEach(function (product) {
-  productsContainer.innerHTML += `
-  <div class="shop-item-container">
-    <a href="product.html?id=${product.id}" class="shop-item">
-        <img class="image-size" src="${product.image}" alt="yellow and grey jacket" />
-        <h2 class="item-title">${product.name}</h2>
-        <h3 class="item-price">${product.price}kr</h3>  
-    </a>
-    <button class="cart-button cart-all" data-product="${product.id}">Add to cart</button>
-    </div>
-    `;
-});
 
 // adding product to cart by selecting its id
 const buttons = document.querySelectorAll(".cart-button");
@@ -92,3 +75,39 @@ const closeButton = document.querySelector("#close-button");
 closeButton.onclick = function () {
   cartLateral.style.display = "none";
 };
+
+// Fetch products from Wordpress Headless
+async function getProducts() {
+  // Basic Authentication credentials
+  const key = "ck_f96e886056108b327e097e754ad258de85144cf1";
+  const secret = "cs_661995643e5ad647839804fe5c1b5045873c36ab";
+  const credentials = btoa(`${key}:${secret}`);
+
+  // fetch products
+  let response = await fetch(
+    "https://rainydays-wp.rafa.a2hosted.com/wp-json/wc/v1/products?per_page=15&orderby=id&order=asc",
+    { headers: { Authorization: `Basic ${credentials}` } }
+  );
+  const products = await response.json();
+
+  // add products to view
+  addProductsToHTML(products);
+}
+
+getProducts();
+
+// adding imported products into the shop page
+function addProductsToHTML(p) {
+  p.forEach(function (product) {
+    productsContainer.innerHTML += `
+  <div class="shop-item-container">
+    <a href="product.html?id=${product.id}" class="shop-item">
+        <img class="image-size" src="${product.images[0].src}" alt="yellow and grey jacket" />
+        <h2 class="item-title">${product.name}</h2>
+        <h3 class="item-price">${product.price}kr</h3>  
+    </a>
+    <button class="cart-button cart-all" data-product="${product.id}">Add to cart</button>
+    </div>
+    `;
+  });
+}

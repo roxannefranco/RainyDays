@@ -11,6 +11,9 @@ const cartTotal = document.querySelector("#total-items");
 if (urlParams.has("id")) {
   id = urlParams.get("id");
 }
+// trocar products find por fetch com endpoint do single (insonia)
+//ver fetch products.js
+// ter em atencao async/await
 const product = products.find((item) => item.id === id);
 const productContainer = document.querySelector("#single-item");
 productContainer.innerHTML = `<div class="product-boxes">
