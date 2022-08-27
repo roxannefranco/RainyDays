@@ -1,3 +1,4 @@
+import { key, secret } from "./credentials.js";
 const productsContainer = document.querySelector(".shop-items");
 const cartLateral = document.querySelector("#cart-lateral");
 const cartList = document.querySelector(".cart-list");
@@ -5,9 +6,6 @@ const totalContainer = document.querySelector(".total");
 
 // targetting the total span
 const cartTotal = document.querySelector("#total-items");
-
-// adding product to cart by selecting its id
-const buttons = document.querySelectorAll(".cart-button");
 let cart = [];
 
 // check if local storage has any products
@@ -16,32 +14,6 @@ if (cartStorage != null) {
   cart = cartStorage;
   updateCartTotal();
 }
-
-// Loops through all buttons and adds event listener to each
-buttons.forEach(function (button) {
-  // Add an event listener to each button (for click event)
-  button.onclick = function (event) {
-    // Get the id of the product that was clicked
-    const dataId = event.target.dataset.product;
-    const addItem = products.find((item) => item.id === dataId);
-    const itemInCart = cart.find((item) => item.id === dataId);
-    if (itemInCart == null) {
-      // Add the product to the cart
-      addItem.quantity = 1;
-      cart.push(addItem);
-    } else {
-      // count +1
-      const index = cart.indexOf(itemInCart);
-      cart[index].quantity += 1;
-    }
-    console.log(cart);
-    // Call a method to show the cart
-    showCart(cart);
-    localStorage.setItem("cartList", JSON.stringify(cart));
-    // Invokes updateCartTotal
-    updateCartTotal();
-  };
-});
 
 // Show lateral cart on the side when adding items
 function showCart(cartItems) {
@@ -53,7 +25,7 @@ function showCart(cartItems) {
     cartList.innerHTML += `
     <div class="cart-item">
     <h4>${cartElement.name}<span> X ${cartElement.quantity}</span></h4>
-    <img class="cart-image image-size" src="${cartElement.image}" alt="yellow and grey jacket" />
+    <img class="cart-image image-size" src="${cartElement.images[0].src}" alt="${cartElement.images[0].alt}" />
     </div>`;
   });
 
@@ -79,8 +51,6 @@ closeButton.onclick = function () {
 // Fetch products from Wordpress Headless
 async function getProducts() {
   // Basic Authentication credentials
-  const key = "ck_f96e886056108b327e097e754ad258de85144cf1";
-  const secret = "cs_661995643e5ad647839804fe5c1b5045873c36ab";
   const credentials = btoa(`${key}:${secret}`);
 
   // fetch products
@@ -98,6 +68,8 @@ getProducts();
 
 // adding imported products into the shop page
 function addProductsToHTML(p) {
+  // remove loader
+  productsContainer.innerHTML = "";
   p.forEach(function (product) {
     productsContainer.innerHTML += `
   <div class="shop-item-container">
@@ -109,5 +81,34 @@ function addProductsToHTML(p) {
     <button class="cart-button cart-all" data-product="${product.id}">Add to cart</button>
     </div>
     `;
+  });
+
+  // adding product to cart by selecting its id
+  const buttons = document.querySelectorAll(".cart-button");
+
+  // Loops through all buttons and adds event listener to each
+  buttons.forEach(function (button) {
+    // Add an event listener to each button (for click event)
+    button.onclick = function (event) {
+      // Get the id of the product that was clicked
+      const dataId = event.target.dataset.product;
+      const addItem = p.find((item) => item.id == dataId);
+      const itemInCart = cart.find((item) => item.id == dataId);
+      if (itemInCart == null) {
+        // Add the product to the cart
+        addItem.quantity = 1;
+        cart.push(addItem);
+      } else {
+        // count +1
+        const index = cart.indexOf(itemInCart);
+        cart[index].quantity += 1;
+      }
+      console.log(cart);
+      // Call a method to show the cart
+      showCart(cart);
+      localStorage.setItem("cartList", JSON.stringify(cart));
+      // Invokes updateCartTotal
+      updateCartTotal();
+    };
   });
 }

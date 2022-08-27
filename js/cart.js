@@ -14,7 +14,7 @@ function createCart() {
     cartContainer.innerHTML += `
   <div data-index="${index}" class="product-row">
   <div class="image-box">
-    <img src="${cartElement.image}" alt="white jacket" />
+    <img src="${cartElement.images[0].src}" alt="${cartElement.images[0].alt}" />
     <span>${cartElement.quantity}</span>
   </div>
   <h2 class="title">${cartElement.name}</h2>
