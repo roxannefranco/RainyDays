@@ -12,7 +12,7 @@ Developed as my first project as a student of Front-end Development at Noroff, t
 Process includes:
 
 - Wireframe and Prototyping using Figma;
-- Developed with HTML, CSS and JS;
+- Developed with ```HTML```, ```CSS``` and ```JS```;
 - Headless WordPress installation to manage the website's content;
 - Woocommerce plugin instalation;
 - Every screen size being responsive;
@@ -21,9 +21,9 @@ Process includes:
 ## Built With
 
 - Figma;
-- HTML;
-- CSS;
-- Javascript;
+- ```HTML```;
+- ```CSS```;
+- ```Javascript```;
 - Wordpress REST API.
 
 ## Getting Started
@@ -36,22 +36,8 @@ Process includes:
 git clone git@github.com:NoroffFEU/portfolio-1-example.git
 ```
 
-2. Install the dependencies:
-
-```
-npm install
-```
-
-### Running
-
-To run the app, run the following commands:
-
-```bash
-npm run start
-```
-
 ## Links
 
-- Netlify Website (https://rainydayswear.netlify.app/)
+- [Live Website](https://rainydayswear.netlify.app/)
 
 
